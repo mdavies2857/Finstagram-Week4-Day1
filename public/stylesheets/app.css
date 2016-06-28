@@ -1,0 +1,26 @@
+header {
+    background-color: #244751;
+    color: #E8FDFF;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+main {
+    background-color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 48px;
+}
+
+.post .user-info img {
+    border-radius: 100%;
+}
