@@ -8,9 +8,6 @@ end
 
 get "/" do
     # Array
-    
-    [post_shark, post_whale, post_marlin].to_s
-end 
     post_shark = {
         username = "sharky_j",
         avatar_url = "http://naserca.com/images/sharky_j.jpg",
@@ -54,3 +51,23 @@ end
         }]
     }
 end
+
+    get '/' do
+        
+        [post_shark,post_whale, post_marlin].to_s
+    end
+    
+    
+        #if the time_ago_in_minutes is more than 60
+        #if time_ago_in_minutes >= 60
+                #return this string
+            #   "#{time_ago_in_minutes / 60}" hours ago"
+            ##if it's an hour exactly
+            #elsifit just happened
+                #   "just a moment ago"
+            #if it's less than or equal to an hour-
+            #else
+                ##return this instead
+                    #"less than one hour"
+                #"#{time_ago_in_minutes} minutes ago"
+            #end
