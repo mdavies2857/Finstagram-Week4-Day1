@@ -23,7 +23,7 @@ end
         username: "sharky_j",    
         text: "sharky_j: out for the weekend... looking for new friends!"
         }]
-    }
+}
     
         post_whale = {
         username = "kirk_whalum",
