@@ -5,11 +5,12 @@ def humanized_time_ago(time_ago_in_minutes)
         "#{time_ago_in_minutes} minutes ago"
     end 
 end
+    
 
-get "/" do
+get '/' do
     # Array
     post_shark = {
-        username: "sharky_j"
+        username: "sharky_j",
         avatar_url: "http://naserca.com/images/sharky_j.jpg",
         photo_url: "http://naserca.com/images/shark.jpg",
         humanized_time_ago: humanized_Time_ago(15),
@@ -48,8 +49,12 @@ get "/" do
             text: "lunchtime! ;)"
             }]
          }
+    end
+    
+    get '/' do
+        # ...
         
-        [post_shark,post_whale, post_marlin].to_s
+        [post_shark, post_whale, post_marlin].to_s
     end
     
     
