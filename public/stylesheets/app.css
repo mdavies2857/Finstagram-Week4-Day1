@@ -5,7 +5,7 @@ header {
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: lightgrey;
     padding: 10px;
 }
 
@@ -22,7 +22,6 @@ main {
     border-radius: 100%;
 }
 
-}
 
 @media not all, (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
 .coreSpriteDesktopNavLogoAndWordmark {

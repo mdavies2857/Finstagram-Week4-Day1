@@ -6,14 +6,13 @@ def humanized_time_ago(time_ago_in_minutes)
     end 
 end
     
-
 get '/' do
     # Array
-    post_shark = {
+    @post_shark = {
         username: "sharky_j",
         avatar_url: "http://naserca.com/images/sharky_j.jpg",
         photo_url: "http://naserca.com/images/shark.jpg",
-        humanized_time_ago: humanized_Time_ago(15),
+        humanized_time_ago: humanized_time_ago(15),
         time_ago_in_minutes: 15,
         like_count: 0,
         comment_count: 1,
@@ -23,11 +22,11 @@ get '/' do
             }]
         }
     
-        post_whale = {
+    @post_whale = {
         username: "kirk_whalum",
         avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
         photo_url: "http://naserca.com/imageswhale.jpg",
-        humanized_time_ago: humanized_Time_ago(65),
+        humanized_time_ago: humanized_time_ago(65),
         like_count: 0,
         comment_count: 1,
         comments: [{
@@ -37,11 +36,11 @@ get '/' do
         }
     
         
-        post_marlin = {
+    @post_marlin = {
         username: "marlin_peppa",
         avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
         photo_url: "http://naserca.com/images/marlin.jpg",
-        humanized_time_ago: humanized_Time_ago(190),
+        humanized_time_ago: humanized_time_ago(190),
         like_count: 0,
         comment_count: 1,
         comments: [{
@@ -49,25 +48,10 @@ get '/' do
             text: "lunchtime! ;)"
             }]
          }
-    end
-    
-    get '/' do
-        # ...
+
+    [@post_shark, @post_whale, @post_marlin].to_s
         
-        [post_shark, post_whale, post_marlin].to_s
+        erb(:index)  
     end
     
-    
-        #if the time_ago_in_minutes is more than 60
-        #if time_ago_in_minutes >= 60
-                #return this string
-            #   "#{time_ago_in_minutes / 60}" hours ago"
-            ##if it's an hour exactly
-            #elsifit just happened
-                #   "just a moment ago"
-            #if it's less than or equal to an hour-
-            #else
-                ##return this instead
-                    #"less than one hour"
-                #"#{time_ago_in_minutes} minutes ago"
-            #end
+
