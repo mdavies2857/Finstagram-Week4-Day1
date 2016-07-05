@@ -25,7 +25,7 @@ get '/' do
     @post_whale = {
         username: "kirk_whalum",
         avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
-        photo_url: "http://naserca.com/imageswhale.jpg",
+        photo_url: "http://naserca.com/images/whale.jpg",
         humanized_time_ago: humanized_time_ago(65),
         like_count: 0,
         comment_count: 1,
